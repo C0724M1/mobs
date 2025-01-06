@@ -1,0 +1,50 @@
+[
+	{
+		"name": "Euclidean Geometry in Mathematical Olympiads",
+		"path": "./assets/images/books/EuclideanGeometry/preview.png",
+		"author": "Evan Chen",
+		"price": "$19.99",
+		"detailPage": "./details.html",
+		"rating": 5
+	},
+	{
+		"name": "Learning Path Getting Started with Python for IoT",
+		"path": "./assets/images/books/GettingStartedwithPython/preview.jpg",
+		"author": "Tim Cox",
+		"price": "$39.99",
+		"detailPage": "./details.html",
+		"rating": 5
+	},
+	{
+		"name": "Web Application Security",
+		"path": "./assets/images/books/WebAppSecurity/preview.jpeg",
+		"author": "Malcolm McDonald",
+		"price": "$29.99",
+		"detailPage": "./details.html",
+		"rating": 4
+	},
+	{
+		"name": "Python Data Science Handbook",
+		"path": "./assets/images/books/PythonData/preview.jpeg",
+		"author": "Jake VanderPlas",
+		"price": "$29.99",
+		"detailPage": "./details.html",
+		"rating": 5
+	},
+	{
+		"name": "Learning PHP, MySQL & JavaScript ",
+		"path": "./assets/images/books/LearningPHP_MySQL_JS/preview.jpeg",
+		"author": "Robin Nixon",
+		"price": "$29.99",
+		"detailPage": "./details.html",
+		"rating": 5
+	},
+	{
+		"name": "Design Patern For VueJS",
+		"path": "./assets/images/books/DesignVueJS/preview.png",
+		"author": "Lachlan Miler",
+		"price": "$29.99",
+		"detailPage": "./details.html",
+		"rating": 5
+	}
+]

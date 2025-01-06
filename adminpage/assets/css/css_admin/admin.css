@@ -1,0 +1,145 @@
+/*font color : #3ac8f2 ; background color : #4b5e6e*/
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    right: 20px;
+}
+
+input button{
+    right: 20px;
+}
+
+.dropdown-menu li {
+    margin: 5px 0;
+    padding: 5px 10px;
+}
+
+
+.sidebar {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    height: 100%;
+    width: 300px;
+    padding-top: 20px;
+    background-color: #4b5e6e;
+    transition: width 0.3s;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 20px;
+    color: #3ac8f2;
+}
+
+.sidebar .description {
+    font-size: 20px;
+}
+
+.sidebar .nav-link:hover {
+    background-color: #3ac8f2;
+}
+
+.sidebar .sub-menu{
+    background-color: darkblue;
+    padding-left: 3%;
+}
+
+
+.main-content {
+    right: 0;
+    height: 100%;
+    margin-left: 300px;
+    padding-top: 130px;
+    /*padding: 15px;*/
+    background-color: white;
+}
+
+table {
+    table-layout: fixed;
+    width: 100%;
+}
+
+table th:nth-child(1),
+table td:nth-child(1) {
+    width: 5%;
+}
+
+table th:nth-child(2),
+table td:nth-child(2) {
+    width: 5%;
+}
+
+.table-title {
+    background: white;
+    color:#fff;
+    position:sticky;
+    top:70px;
+    width:100%;
+    left:20px;
+    padding:10px;
+}
+
+.table-title h2{
+    color: #3ac8f2;
+    margin:5px 0  0;
+    font-size:30px;
+    text-align:center;
+}
+
+th, td, tr {
+    font-weight: bold;
+    font-size:15px;
+}
+
+.edit{
+    color: orange;
+}
+
+.delete{
+    color:red;
+}
+
+.modal-dialog {
+    max-width: 600px;
+    margin: 30px auto;
+}
+
+.modal-content {
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.modal-header {
+    background-color: #4b5e6e;
+    color: #fff;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 20px;
+    font-size: 24px;
+    margin: 0;
+}
+
+.modal-body {
+    padding: 20px;
+}
+.modal-body textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.modal-footer {
+    background-color: #4b5e6e;
+    padding: 15px;
+    text-align: right;
+    color: white;
+}
+

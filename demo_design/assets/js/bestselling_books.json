@@ -1,0 +1,50 @@
+[
+	{
+		"name": "Android Action",
+		"path": "./assets/images/books/AndroidAction/preview.jpeg",
+		"author": "John Doe",
+		"price": "$19.99",
+		"detailPage": "./details.html",
+		"rating": 5
+	},
+	{
+		"name": "Clean Code",
+		"path": "./assets/images/books/Cleancode/preview.png",
+		"author": "Robert C. Martin",
+		"price": "$39.99",
+		"detailPage": "./details.html",
+		"rating": 5
+	},
+	{
+		"name": "Concrete Mathematics",
+		"path": "./assets/images/books/ConcreteMathematics/preview.jpeg",
+		"author": "Ian Goodfellow",
+		"price": "$29.99",
+		"detailPage": "./details.html",
+		"rating": 4
+	},
+	{
+		"name": "C# in Depth 4th edition",
+		"path": "./assets/images/books/CSharpDepth/preview.jpeg",
+		"author": "Jon Skeet",
+		"price": "$29.99",
+		"detailPage": "./details.html",
+		"rating": 5
+	},
+	{
+		"name": "CSS in Depth",
+		"path": "./assets/images/books/CSSInDepth/preview.jpeg",
+		"author": "Keith J.Grant",
+		"price": "$29.99",
+		"detailPage": "./details.html",
+		"rating": 5
+	},
+	{
+		"name": "Design Patern For VueJS",
+		"path": "./assets/images/books/DesignVueJS/preview.png",
+		"author": "Lachlan Miler",
+		"price": "$29.99",
+		"detailPage": "./details.html",
+		"rating": 5
+	}
+]

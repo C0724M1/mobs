@@ -1,0 +1,48 @@
+<mxfile host="65bd71144e">
+    <diagram name="ERD for Bookstore" id="0">
+        <mxGraphModel dx="1249" dy="633" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#190033" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="Books" value="Books&#10;[BookID (PK), Title, Author, Publisher, ISBN, Price, Stock, CategoryID (FK)]" style="shape=rectangle;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="100" y="100" width="180" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="Categories" value="Categories&#10;[CategoryID (PK), Name, Description]" style="shape=rectangle;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="400" y="30" width="180" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="Users" value="Users&#10;[UserID (PK), Name, Email, Password, Role]" style="shape=rectangle;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="300" width="180" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="Orders" value="Orders&#10;[OrderID (PK), UserID (FK), OrderDate, TotalAmount]" style="shape=rectangle;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="490" y="210" width="180" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="OrderDetails" value="OrderDetails&lt;br&gt;[OrderDetailID (PK), OrderID (FK), BookID (FK), Quantity, SubTotal], Status" style="shape=rectangle;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="610" y="430" width="200" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="Reviews" value="Reviews&#10;[ReviewID (PK), BookID (FK), UserID (FK), Rating, Comment, ReviewDate]" style="shape=rectangle;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="320" y="450" width="200" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="Books_Categories" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;" parent="1" source="Books" target="Categories" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="Users_Orders" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;" parent="1" source="Users" target="Orders" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="Orders_OrderDetails" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="Orders" target="OrderDetails" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="570" y="360" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="Books_OrderDetails" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;" parent="1" source="Books" target="OrderDetails" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="Books_Reviews" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;" parent="1" source="Books" target="Reviews" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="Reviews_Users" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;" parent="1" source="Reviews" target="Users" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
