@@ -1,6 +1,6 @@
-package com.example.casestudy.entity;
+package com.example.casestudy.DTO;
 
-public class Books {
+public class BookDTO {
     private int book_ID;
     private String book_Name;
     private String author;
@@ -8,12 +8,11 @@ public class Books {
     private String book_ISBN;
     private double price;
     private int stock;
-    private int category_ID;
+    private String category_Name;
 
-    public Books(Books book) {
-    }
+    public BookDTO() {}
 
-    public Books(int book_ID, String book_Name, String author, String publisher, String book_ISBN, double price, int stock, int category_ID) {
+    public BookDTO(int book_ID, String book_Name, String author, String publisher, String book_ISBN, double price, int stock, String category_Name) {
         this.book_ID = book_ID;
         this.book_Name = book_Name;
         this.author = author;
@@ -21,18 +20,9 @@ public class Books {
         this.book_ISBN = book_ISBN;
         this.price = price;
         this.stock = stock;
-        this.category_ID = category_ID;
+        this.category_Name = category_Name;
     }
 
-    public Books(String book_Name, String author, String publisher, String book_ISBN, double price, int stock, int category_ID) {
-        this.book_Name = book_Name;
-        this.author = author;
-        this.publisher = publisher;
-        this.book_ISBN = book_ISBN;
-        this.price = price;
-        this.stock = stock;
-        this.category_ID = category_ID;
-    }
 
     public int getBook_ID() {
         return book_ID;
@@ -90,12 +80,10 @@ public class Books {
         this.stock = stock;
     }
 
-    public int getCategory_ID() {
-        return category_ID;
-    }
+    public String getCategory_Name() { return category_Name; }
 
-    public void setCategory_ID(int category_ID) {
-        this.category_ID = category_ID;
+    public void setCategory_Name(int category_ID) {
+        this.category_Name = category_Name;
     }
 }
 
