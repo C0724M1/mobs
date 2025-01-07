@@ -1,3 +1,4 @@
+drop database new_case;
 create database new_case;
 use new_case;
 
@@ -27,12 +28,14 @@ create table books(
 -- Purpose: Stores user information for authentication and authorization.
 create table users(
 	user_ID int primary key auto_increment,
-	user_name varchar(50) not null, -- Name of the user
-	user_pass varchar(255) not null, -- Encrypted password
-	email varchar(100) not null unique, -- Unique email address for login
-	user_role enum('Admin', 'User') default 'Customer', -- Role of the user (e.g., Admin or Customer)
-	user_status enum('Active', 'Inactive', 'Banned') default 'Active', -- Status of the user account
-	phone varchar(10) not null -- Phone number of the user
+	user_name varchar(50) not null,
+	user_pass varchar(255) not null,
+	email varchar(100) not null unique,
+	user_role varchar(10) not null default 'Customer',
+	check (user_role in ('Admin', 'User', 'Customer')),
+	user_status varchar(10) not null default 'Active',
+	check (user_status in ('Active', 'Inactive', 'Banned')),
+	phone varchar(10) not null
 );
 
 -- Table: Orders
@@ -70,3 +73,13 @@ create table reviews(
 	foreign key(book_ID) references books(book_ID),
 	foreign key(user_ID) references users(user_ID)
 );
+
+
+-- Test
+INSERT INTO categories (category_Name, category_Description) VALUES
+('Programming', 'Books about programming languages and concepts'),
+('Algorithms', 'Books about algorithms and data structures');
+
+INSERT INTO books (book_Name, author, publisher, book_ISBN, price, stock, category_ID) VALUES
+('Java Programming', 'James Gosling', 'Sun Microsystems', '1234567890', 29.99, 10, 1),
+('Data Structures', 'Mark Allen Weiss', 'Pearson', '1234567891', 35.99, 5, 2);

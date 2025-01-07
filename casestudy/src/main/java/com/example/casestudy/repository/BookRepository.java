@@ -15,14 +15,14 @@ public class BookRepository {
 			 ResultSet rs = ps.executeQuery()) {
 			while (rs.next()) {
 				books.add(new Books(
-						rs.getInt("book_ID"),
-						rs.getString("book_Name"),
-						rs.getString("author"),
-						rs.getString("publisher"),
-						rs.getString("book_ISBN"),
-						rs.getDouble("price"),
-						rs.getInt("stock"),
-						rs.getInt("category_ID")
+					rs.getInt("book_ID"),
+					rs.getString("book_Name"),
+					rs.getString("author"),
+					rs.getString("publisher"),
+					rs.getString("book_ISBN"),
+					rs.getDouble("price"),
+					rs.getInt("stock"),
+					rs.getInt("category_ID")
 				));
 			}
 		} catch (SQLException e) {
@@ -31,14 +31,15 @@ public class BookRepository {
 		return books;
 	}
 
-	public void deleteById(int id) {
+	public int deleteById(int id) {
 		String DELETE_BOOK = "DELETE FROM books WHERE book_ID = ?";
 		try (Connection connection = BaseRepo.getConnection();
 			 PreparedStatement ps = connection.prepareStatement(DELETE_BOOK)) {
 			ps.setInt(1, id);
-			ps.executeUpdate();
+			return ps.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
+		return 0;
 	}
 }

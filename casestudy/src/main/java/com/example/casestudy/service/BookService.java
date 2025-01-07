@@ -12,7 +12,8 @@ public class BookService {
 		return repository.findAll();
 	}
 
-	public void deleteBookById(int id) {
-		repository.deleteById(id);
+	public boolean deleteBookById(int id) {
+		int affectedRows = repository.deleteById(id);
+		return affectedRows > 0;
 	}
 }
