@@ -1,0 +1,118 @@
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    right: 20px;
+}
+
+input button{
+    right: 20px;
+}
+
+.dropdown-menu li {
+    margin: 5px 0;
+    padding: 5px 10px;
+}
+
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 70px;
+    height: 100%;
+    width: 300px;
+    padding-top: 20px;
+    background-color: #4b5e6e;
+    transition: width 0.3s;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 20px;
+    color: #3ac8f2;
+}
+
+.sidebar .description {
+    font-size: 20px;
+}
+
+.sidebar .nav-link:hover {
+    background-color: #3ac8f2;
+}
+
+.sidebar .sub-menu{
+    background-color: darkblue;
+    padding-left: 3%;
+}
+.main-content {
+    right: 0;
+    height: 100%;
+    margin-left: 310px;
+    padding-top: 80px;
+    /*padding: 15px;*/
+    background-color: white;
+}
+
+table {
+    table-layout: fixed;
+    width: 100%;
+}
+
+
+h4{
+    padding: 10px;
+    margin: 0;
+}
+p{
+    font-weight: bold;
+}
+.card {
+    border: 1px solid #22242c;
+    border-radius: 0.5rem;
+}
+
+.metric-card {
+    padding: 1.5rem;
+}
+
+.metric-value {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.metric-label {
+    color: #9ca3af;
+    font-size: 0.875rem;
+}
+
+.trend-up {
+    color: forestgreen;
+}
+
+.trend-down {
+    color: #ef4444;
+}
+
+.img-wrapper {
+    position: relative;
+    width: 100%;
+    padding-block: 56.25%; /* Tỷ lệ 16:9 */
+    height: 0;
+}
+
+.img-wrapper img {
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+

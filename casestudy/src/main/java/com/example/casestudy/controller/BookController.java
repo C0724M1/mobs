@@ -32,7 +32,7 @@ public class BookController extends HttpServlet {
             case "create":
                 List<Categories> categories = categoryService.getAll();
                 req.setAttribute("categories", categories);
-                req.getRequestDispatcher("/WEB-INF/view/book/newbook.jsp").forward(req, resp);
+                req.getRequestDispatcher("/WEB-INF/view/book/listbook.jsp").forward(req, resp);
                 break;
             case "delete":
                 int book_ID = Integer.parseInt(req.getParameter("id"));
@@ -40,7 +40,6 @@ public class BookController extends HttpServlet {
                 resp.sendRedirect("/listbook?message=deleted");
                 break;
             case "update":
-                req.getRequestDispatcher("/WEB-INF/view/book/updatebook.jsp").forward(req, resp);
                 break;
             default:
                 String message = req.getParameter("message");
@@ -50,7 +49,7 @@ public class BookController extends HttpServlet {
                     } else if (message.equals("created")) {
                         req.setAttribute("message", "Thêm mới thành công");
                     }else if (message.equals("updated")){
-                        req.setAttribute("message","Them moi thanh cong");
+                        req.setAttribute("message","Cập nhật thành công");
                     }
                 }
                 List<BookDTO> books = bookService.getAllBookDTO();
@@ -81,7 +80,7 @@ public class BookController extends HttpServlet {
                 resp.sendRedirect("/listbook?message=created");
                 break;
             case "update":
-                Books book = new Books(req.getParameter("book_Name"), req.getParameter("author"), req.getParameter("publisher"), req.getParameter("book_ISBN"), Double.parseDouble(req.getParameter("price")), Integer.parseInt(req.getParameter("stock")), Integer.parseInt(req.getParameter("category_ID")));
+                Books book = new Books(req.getParameter("book_NameEdit"), req.getParameter("authorEdit"), req.getParameter("publisherEdit"), req.getParameter("book_ISBNEdit"), Double.parseDouble(req.getParameter("priceEdit")), Integer.parseInt(req.getParameter("stockEdit")), Integer.parseInt(req.getParameter("category_IDEdit")));
                 int book_ID = Integer.parseInt(req.getParameter("id"));
                 bookService.update(book_ID,book);
                 resp.sendRedirect("/listbook?message=updated");
