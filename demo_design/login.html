@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="MOBS - Market Online Book Shop">
+	<title>MOBS</title>
+	<link rel="shortcut icon" href="./assets/logo.png">
+	<link rel="stylesheet" href="./assets/css/auth.css">
+	<link rel="stylesheet" href="./assets/css/style.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css">
+</head>
+<body>
+	<header class="header">
+		<!-- Top Header Bar -->
+		<div class="top-header">
+			<a href="./index.html" class="left">
+				<img src="./assets/images/icons/bookstore.png" alt="MOBS Logo" class="logo">
+				<span class="project-name">MOBS</span>
+				<span class="subname">Market Online Book Store</span>
+			</a>
+			<div class="center">
+				<div class="search-container">
+					<img src="./assets/images/icons/search.png" alt="Search Icon" class="search-icon">
+					<input type="text" placeholder="Search for books..." class="search-bar">
+					<button class="search-btn">Search</button>
+				</div>
+			</div>			
+			<div class="right">
+				<select class="language-select">
+					<option value="en">EN</option>
+					<option value="vi">VI</option>
+					<option value="fr">FR</option>
+				</select>
+				<button class="icon-btn cart-btn">
+					<img src="./assets/images/icons/cart.png" alt="Cart">
+				</button>
+				<button class="icon-btn user-btn">
+					<img src="./assets/images/icons/user.png" alt="User">
+				</button>
+			</div>
+		</div>
+		<!-- Bottom Header Bar -->
+		<div class="bottom-header">
+			<nav class="navigation">
+				<a href="./index.html" class="nav-link neon-text">Home</a>
+				<a href="./shop.html" class="nav-link neon-text">Shop</a>
+				<a href="#" class="nav-link neon-text">Blogs</a>
+				<a href="#" class="nav-link neon-text">Pages</a>
+				<a href="#" class="nav-link neon-text">Contact</a>
+			</nav>
+			<div class="current-time neon-text" id="current-time"></div>
+		</div>
+		<!-- Hamburger Menu Overlay -->
+		<div id="hamburgerMenu" class="overlay">
+			<button class="closebtn">
+				<img src="./assets/images/icons/x_close.png" alt="Close Menu">
+			</button>
+			<div class="overlay-content">
+				<a href="./index.html">Home</a>
+				<a href="./shop.html">Shop</a>
+				<a href="#">Blogs</a>
+				<a href="#">Pages</a>
+				<a href="#">Contact</a>
+			</div>
+		</div>
+		<!-- Hamburger Icon -->
+		<button id="hamburgerIcon" class="hamburger">
+			<img src="./assets/images/icons/menu.png" alt="Menu">
+		</button>
+	</header>
+
+	<main class="auth-container">
+		<div class="form-container">
+			<div class="tabs">
+				<button id="loginTab" class="tab active">Login</button>
+				<button id="registerTab" class="tab">Register</button>
+			</div>
+			<!-- Login Form -->
+			<form id="loginForm" class="auth-form active">
+				<h2>Login to Your Account</h2>
+				<label for="loginEmail">Email</label>
+				<input type="email" id="loginEmail" placeholder="Enter your email" required>
+				<label for="loginPassword">Password</label>
+				<input type="password" id="loginPassword" placeholder="Enter your password" required>
+				<button type="submit" class="auth-btn">Login</button>
+			</form>
+			<!-- Register Form -->
+			<form id="registerForm" class="auth-form">
+				<h2>Create an Account</h2>
+				<label for="registerName">Full Name</label>
+				<input type="text" id="registerName" placeholder="Enter your full name" required>
+				<label for="registerUsername">Username</label>
+				<input type="text" id="registerUsername" placeholder="Choose a username" required>
+				<label for="registerPhone">Phone Number</label>
+				<input type="tel" id="registerPhone" placeholder="Enter your phone number" pattern="[0-9]{10}" required>
+				<label for="registerEmail">Email</label>
+				<input type="email" id="registerEmail" placeholder="Enter your email" required>
+				<label for="registerPassword">Password</label>
+				<input type="password" id="registerPassword" placeholder="Create a password" required>
+				<button type="submit" class="auth-btn">Register</button>
+			</form>
+		</div>
+	</main>
+
+	<!-- Cart Modal -->
+	<div id="cartModal" class="modal">
+		<div class="modal-content">
+			<img src="./assets/images/icons/x_close.png" alt="Close" class="close-btn" id="closeModal">
+			<h2>Login Required</h2>
+			<p>You need to log in or register to add items to your cart.</p>
+			<a href="./login.html" class="modal-btn">Login/Register</a>
+		</div>
+	</div>
+
+	<!-- Footer -->
+	<footer class="footer">
+		<div class="footer-top">
+			<div class="footer-about">
+				<img src="./assets/images/icons/bookstore.png" alt="MOBS Logo" class="footer-logo">
+				<p><a href="./index.html" class="neon-text" style="color: aqua; text-decoration: none;">MOBS</a> brings tech enthusiasts and developers together by offering curated books and resources in programming, algorithms, AI, and more.</p>
+				<p><strong>+84 - 1800 - 4635</strong></p>
+				<p>contact@mobs.com</p>
+			</div>
+			<div class="footer-links">
+				<div class="footer-column">
+					<h3>Category</h3>
+					<ul>
+						<li><a href="./shop.html">Programming</a></li>
+						<li><a href="./shop.html">Algorithms</a></li>
+						<li><a href="./shop.html">AI & Machine Learning</a></li>
+						<li><a href="./shop.html">Databases</a></li>
+						<li><a href="./shop.html">Security</a></li>
+						<li><a href="./shop.html">Tech Research</a></li>
+					</ul>
+				</div>
+				<div class="footer-column">
+					<h3>Useful Links</h3>
+					<ul>
+						<li><a href="#">Secure Shopping</a></li>
+						<li><a href="#">Privacy Policy</a></li>
+						<li><a href="#">Terms of Use</a></li>
+						<li><a href="#">Shipping Policy</a></li>
+						<li><a href="#">Returns Policy</a></li>
+						<li><a href="#">Payment Options</a></li>
+					</ul>
+				</div>
+				<div class="footer-column">
+					<h3>Explore</h3>
+					<ul>
+						<li><a href="#">About Us</a></li>
+						<li><a href="#">Store Locator</a></li>
+						<li><a href="#">Tech Blogs</a></li>
+						<li><a href="#">FAQs</a></li>
+					</ul>
+				</div>
+				<div class="footer-column">
+					<h3>Get In Touch</h3>
+					<ul>
+						<li><a href="#">Careers</a></li>
+						<li><a href="#">Become a Partner</a></li>
+						<li><a href="#">Contact Us</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="footer-bottom">
+			<p>&copy; 2025 MOBS. All rights reserved.</p>
+			<img src="./assets/images/payment_methods.png" alt="Payment Methods">
+		</div>
+	</footer>
+
+	<script type="module">
+		import { toggleMenu } from './assets/js/main.js';
+		document.getElementById('hamburgerIcon').addEventListener('click', toggleMenu);
+		document.querySelector('.closebtn').addEventListener('click', toggleMenu);
+	</script>
+	<script type="module" src="./assets/js/auth.js"></script>
+	<noscript>Your browser does not support JavaScript!</noscript>
+</body>
+</html>
