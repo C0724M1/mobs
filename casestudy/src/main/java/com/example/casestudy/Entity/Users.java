@@ -1,4 +1,4 @@
-package com.example.casestudy.entity;
+package com.example.casestudy.Entity;
 
 public class Users {
     private int user_ID;

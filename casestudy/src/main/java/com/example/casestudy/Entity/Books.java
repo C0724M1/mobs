@@ -1,4 +1,4 @@
-package com.example.casestudy.entity;
+package com.example.casestudy.Entity;
 
 public class Books {
     private int book_ID;

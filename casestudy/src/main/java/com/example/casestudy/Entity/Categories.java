@@ -1,4 +1,4 @@
-package com.example.casestudy.entity;
+package com.example.casestudy.Entity;
 
 public class Categories {
     private int category_ID;

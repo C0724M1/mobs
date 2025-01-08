@@ -1,14 +1,13 @@
-package com.example.casestudy.repository;
+package com.example.casestudy.Repository;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class BaseRepo {
-    private static String jdbcURL = "jdbc:mysql://localhost:3306/new_case?useSSL=false";
-    //    new_case là tên database
+    private static String jdbcURL = "jdbc:mysql://localhost:3306/Casestudy_Modul3?useSSL=false";
     private static String jdbcUsername = "root";
-    private static String jdbcPassword = "ducchi_2904";
+    private static String jdbcPassword = "thao1234";
 
 
     public static Connection getConnection() {
