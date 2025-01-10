@@ -13,6 +13,9 @@ public class Books {
     public Books() {
     }
 
+    public Books(Books book) {
+    }
+
     public Books(int book_ID, String book_Name, String author, String publisher, String book_ISBN, double price, int stock, int category_ID) {
         this.book_ID = book_ID;
         this.book_Name = book_Name;
@@ -33,6 +36,8 @@ public class Books {
         this.stock = stock;
         this.category_ID = category_ID;
     }
+
+
 
     public int getBook_ID() {
         return book_ID;

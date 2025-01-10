@@ -22,4 +22,9 @@ public interface IUsersService extends AdminService {
 
     @Override
     List<Users> findByName(String name);
+
+    @Override
+    Users login(String user_name, String user_pass);
+
+    void saveRegister(Users s);
 }

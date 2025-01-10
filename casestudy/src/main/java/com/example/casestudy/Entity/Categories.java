@@ -13,6 +13,11 @@ public class Categories {
         this.category_Description = category_Description;
     }
 
+    public Categories(String category_Name, String category_Description) {
+        this.category_Name = category_Name;
+        this.category_Description = category_Description;
+    }
+
     public int getCategory_ID() {return category_ID;}
     public void setCategory_ID(int category_ID) {this.category_ID = category_ID;}
     public String getCategory_Name() {return category_Name;}

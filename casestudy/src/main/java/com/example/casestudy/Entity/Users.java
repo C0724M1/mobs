@@ -21,6 +21,15 @@ public class Users {
         this.phone = phone;
     }
 
+    public Users(String user_Name, String user_Pass, String email, String user_Role, String user_Status, String phone){
+        this.user_Name = user_Name;
+        this.user_Pass = user_Pass;
+        this.email = email;
+        this.user_Role = user_Role;
+        this.user_Status = user_Status;
+        this.phone = phone;
+    }
+
     public int getUser_ID() {return user_ID;}
     public void setUser_ID(int user_ID) {this.user_ID = user_ID;}
     public String getUser_Name() {return user_Name;}

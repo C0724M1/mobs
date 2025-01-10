@@ -47,7 +47,7 @@
     </div>
 </nav>
 <!--sidebar-->
-<div class="sidebar">
+<div class="sidebar bg-dark" >
     <nav class="nav flex-column">
         <a class="nav-link" href="home.html">
             <span class="icon">
@@ -77,13 +77,13 @@
         </a>
         <!--        Submenu for quản lý người dùng-->
         <div class="sub-menu collapse" id="submenu-customer">
-            <a class="nav-link" href="user_admin.html">
+            <a class="nav-link" href="<c:url value="/user"/>">
                 <span class="icon">
                     <i class="bi bi-file-earmark-check"></i>
                 </span>
                 <span class="description">Danh sách người dùng</span>
             </a>
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="<c:url value="/user"/>" />
                 <span class="icon">
                     <i class="bi bi-file-earmark-check"></i>
                 </span>
@@ -106,13 +106,13 @@
         </a>
         <!--        Submenu for quản lý sách-->
         <div class="sub-menu collapse" id="submenu-book">
-            <a class="nav-link" href="book_admin.html">
+            <a class="nav-link" href="<c:url value="/listbook"/>">
                 <span class="icon">
                     <i class="bi bi-file-earmark-check"></i>
                 </span>
                 <span class="description">Danh sách sách</span>
             </a>
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="<c:url value="/listbook"/>">
                 <span class="icon">
                     <i class="bi bi-file-earmark-check"></i>
                 </span>
@@ -132,27 +132,21 @@
             <span class="icon">
                 <i class="bi bi-chat-square-text"></i>
             </span>
-            <span class="description">Quản lý đánh giá<i class="bi bi-caret-down-fill"></i></span>
+            <span class="description">Quản lý danh mục<i class="bi bi-caret-down-fill"></i></span>
         </a>
         <!--        Submenu for quản lý đánh giá-->
         <div class="sub-menu collapse" id="submenu-preview">
-            <a class="nav-link" href="review_admin.html">
+            <a class="nav-link" href="<c:url value="/listcategory"/>" >
                 <span class="icon">
                     <i class="bi bi-file-earmark-check"></i>
                 </span>
-                <span class="description">Danh sách đánh giá</span>
+                <span class="description">Danh sách danh mục</span>
             </a>
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="<c:url value="/listcategory"/>" >
                 <span class="icon">
                     <i class="bi bi-file-earmark-check"></i>
                 </span>
-                <span class="description">Duyệt đánh giá</span>
-            </a>
-            <a class="nav-link" href="#">
-                <span class="icon">
-                    <i class="bi bi-file-earmark-check"></i>
-                </span>
-                <span class="description">Thống kê đánh giá</span>
+                <span class="description">Thống kê danh mục</span>
             </a>
         </div>
 
@@ -274,7 +268,7 @@
                                 <div class="form-group">
                                     <label>ID người dùng</label>
                                     <input type="text" class="form-control" name="user_ID"
-                                           value=${user.user_ID} readonly>
+                                           value="${user.user_ID}" readonly>
                                 </div>
                                 <div class="form-group">
                                     <label>MK</label>

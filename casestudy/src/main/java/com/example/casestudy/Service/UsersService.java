@@ -39,4 +39,14 @@ public class UsersService implements IUsersService {
     public List<Users> findByName(String name) {
         return null;
     }
+
+    @Override
+    public Users login(String user, String pass) {
+        return usersrepository.login(user, pass);
+    }
+
+    @Override
+    public void saveRegister(Users s) {
+        usersrepository.saveRegister(s);
+    }
 }

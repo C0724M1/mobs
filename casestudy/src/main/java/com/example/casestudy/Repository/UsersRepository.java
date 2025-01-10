@@ -51,6 +51,24 @@ public class UsersRepository {
         }
     }
 
+
+    public void saveRegister(Users s) {
+        Connection connection = BaseRepo.getConnection();
+        String sql = "insert into users(user_name, user_pass, email, user_role, user_status, phone) values (?,?,?,?,?,?)";
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setString(1, s.getUser_Name());
+            preparedStatement.setString(2, s.getUser_Pass());
+            preparedStatement.setString(3, s.getEmail());
+            preparedStatement.setString(4, s.getUser_Role());
+            preparedStatement.setString(5, s.getUser_Status());
+            preparedStatement.setString(6, s.getPhone());
+            preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
     public void deleteById(int id) {
         try {
             PreparedStatement statement = BaseRepo.getConnection()
@@ -108,6 +126,29 @@ public class UsersRepository {
                     return user;
                 }
             }
+        }
+        return null;
+    }
+
+    public Users login(String user, String pass) {
+        Connection connection = BaseRepo.getConnection();
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement("select * from users where user_name = ? and user_pass = ?");
+            preparedStatement.setString(1, user);
+            preparedStatement.setString(2, pass);
+            ResultSet rs = preparedStatement.executeQuery();
+            while (rs.next()) {
+                String user_name = rs.getString("user_name");
+                String user_pass = rs.getString("user_pass");
+                String email = rs.getString("email");
+                String user_role = rs.getString("user_role");
+                String user_status = rs.getString("user_status");
+                String phone = rs.getString("phone");
+                Users users = new Users(user_name, user_pass, email, user_role, user_status, phone);
+                return users;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
         return null;
     }

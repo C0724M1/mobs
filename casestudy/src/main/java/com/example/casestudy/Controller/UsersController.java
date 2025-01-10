@@ -14,7 +14,7 @@ import java.util.List;
 
 @WebServlet(name = "UserController", urlPatterns = "/user")
 public class UsersController extends HttpServlet {
-    private IUsersService userService = new UsersService();
+    private UsersService userService = new UsersService();
 
 
     @Override
@@ -30,6 +30,12 @@ public class UsersController extends HttpServlet {
                 userService.remove(id);
                 resp.sendRedirect("/user?message=deleted");
                 break;
+            case "login":
+                req.getRequestDispatcher("/WEB-INF/View/Userpage/Login.jsp").forward(req, resp);
+                break;
+            case "register":
+                req.getRequestDispatcher("/WEB-INF/View/Userpage/Register.jsp").forward(req, resp);
+                break;
             default:
                 String message = req.getParameter("message");
                 if (message != null) {
@@ -39,6 +45,10 @@ public class UsersController extends HttpServlet {
                         req.setAttribute("message", "Thêm mới thành công");
                     } else if (message.equals("updated")) {
                         req.setAttribute("message", "Cập nhật thành công");
+                    } else if (message.equals("true")) {
+                        req.setAttribute("message", "Đăng nhập thành công");
+                    } else if (message.equals("false")) {
+                        req.setAttribute("message", "Đăng nhập thất bại");
                     }
                 }
                 List<Users> users = userService.getAll();
@@ -78,6 +88,30 @@ public class UsersController extends HttpServlet {
                 user = new Users(id, user_name, user_pass, email, user_role, user_status, phone);
                 userService.update(id, user);
                 resp.sendRedirect("/user?message=updated");
+                break;
+            case "login":
+                String username = req.getParameter("username");
+                String password = req.getParameter("password");
+                Users user1 = userService.login(username, password);
+                System.out.println(user1);
+                if (user1 != null && user1.getUser_Status().equals("Active") && user1.getUser_Role().equals("Admin")) {
+                    resp.sendRedirect("/user?action");
+                } else if (user1 != null && user1.getUser_Status().equals("Active") && user1.getUser_Role().equals("User")) {
+                    resp.sendRedirect("/Booksimple?message=true_user");
+                } else {
+                    resp.sendRedirect("/Booksimple?message=false");
+                }
+                break;
+            case "register":
+                user_name = req.getParameter("username");
+                email = req.getParameter("email");
+                user_pass = req.getParameter("password");
+                phone = req.getParameter("phone");
+                user_role = req.getParameter("userRole");
+                user_status = req.getParameter("userStatus");
+                user = new Users(user_name, user_pass, email, user_role, user_status, phone);
+                userService.saveRegister(user);
+                resp.sendRedirect("/Booksimple?message=register_success");
                 break;
         }
     }

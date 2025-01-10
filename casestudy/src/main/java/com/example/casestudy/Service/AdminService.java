@@ -17,4 +17,7 @@ public interface AdminService {
     Users findById(int id);
 
     List<Users> findByName(String name);
+
+    Users login(String user_name, String user_pass);
+
 }

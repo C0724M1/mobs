@@ -25,7 +25,7 @@ input button{
     height: 100%;
     width: 300px;
     padding-top: 20px;
-    background-color: #4b5e6e;
+    background-color: black;
     transition: width 0.3s;
 }
 
@@ -34,7 +34,7 @@ input button{
     align-items: center;
     gap: 20px;
     padding: 10px 20px;
-    color: #3ac8f2;
+    color: white;
 }
 
 .sidebar .description {
@@ -42,11 +42,11 @@ input button{
 }
 
 .sidebar .nav-link:hover {
-    background-color: #3ac8f2;
+    background-color: black;
 }
 
 .sidebar .sub-menu{
-    background-color: darkblue;
+    background-color: black;
     padding-left: 3%;
 }
 
@@ -90,7 +90,7 @@ table td:nth-child(2) {
 }
 
 .table-title h2{
-    color: #3ac8f2;
+    color: black;
     margin:5px 0  0;
     font-size:30px;
     text-align:center;
